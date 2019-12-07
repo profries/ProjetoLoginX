@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ProjetoLogin</string>
+    <string name="login">Realizar Login</string>
+    <string name="nome_usuario">Nome do Usuário</string>
+    <string name="senha">Senha</string>
+    <string name="msg_ok_login">Login realizado com sucesso</string>
+    <string name="msg_error_login">Usuário ou senha inválidos</string>
+</resources>
