@@ -1,5 +1,6 @@
 package com.example.projetologinx
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -47,7 +48,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             //intent.putExtra("usuario",nomeString)
-            startActivity(intent)
+            startActivityForResult(intent, 1)
         }
         else{
             Toast.makeText(this,
@@ -56,6 +57,16 @@ class MainActivity : AppCompatActivity() {
 
         textoSenha.setText("")
 
+    }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        if(requestCode == 1){
+            if(resultCode == Activity.RESULT_OK){
+                var username = data?.getStringExtra("usuario")
+                var senha = data?.getStringExtra("senha")
+                Log.d("onActivityResultUsuario",username)
+                Log.d("onActivityResultSenha",senha)
+            }
+        }
     }
 }
